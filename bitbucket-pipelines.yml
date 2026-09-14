@@ -1,0 +1,16 @@
+image: docker:latest
+
+pipelines:
+  branches:
+    odoo:
+      - step:
+          name: Build and Push Docker Image
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - export DOCKER_BUILDKIT=0
+            - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
+            - docker build -t $DOCKER_HUB_USERNAME/smart-schedule:cicd .
+            - docker push $DOCKER_HUB_USERNAME/smart-schedule:cicd

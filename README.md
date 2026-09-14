@@ -1,0 +1,9 @@
+### ENV!! ###
+
+* DB_USERNAME=
+* DB_PASSWORD=
+* DB_NAME=
+* DB_HOST=
+* DB_DIALECT=
+* PORT=
+

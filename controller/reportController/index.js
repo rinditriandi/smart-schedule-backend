@@ -1,0 +1,18 @@
+const createSummaryCogs = require('./createSummaryCogs')
+const readSummaryCogs = require('./readSummaryCogs')
+const readSummaryWbs = require('./readSummaryWbs')
+const readLearningHoursAllConsultants = require('./readLearningHoursAllConsultants')
+const readLearningHoursForApm = require('./readLearningHoursForApm')
+const readLearningHoursByApm = require('./readLearningHoursByApm')
+const readClassTypePersenByApm = require('./readClassTypePersenByApm')
+const readClassTypePersenByProfitCenter = require('./readClassTypePersenByProfitCenter')
+const createLearningHoursByApm = require('./createLearningHoursByApm')
+const createLearningHoursByProfitCenter = require('./createLearningHoursByProfitCenter')
+const readLearningHoursByProfitCenter = require('./readLearningHoursByProfitCenter')
+const createLearningHoursForApm = require('./createLearningHoursForApm')
+const createLearningHoursAllConsultant = require('./createLearningHoursAllConsultant')
+const createSummaryWbs = require('./createSummaryWbs')
+const createClassTypeByApm = require('./createClassTypeByApm')
+const createOdooTimeline = require('./createOdooTimeline')
+
+module.exports = {createOdooTimeline, createClassTypeByApm, readClassTypePersenByProfitCenter, readClassTypePersenByApm, createSummaryWbs, readSummaryWbs, createLearningHoursByApm, createLearningHoursAllConsultant, readLearningHoursAllConsultants, createLearningHoursByProfitCenter, readLearningHoursByProfitCenter, createSummaryCogs, readSummaryCogs, readLearningHoursByApm, readLearningHoursForApm, createLearningHoursForApm }

@@ -1,0 +1,22 @@
+const router = require('express').Router()
+const {createOdooTimeline, createClassTypeByApm, createSummaryWbs, readSummaryCogs, createLearningHoursForApm, createLearningHoursByProfitCenter, readLearningHoursByProfitCenter, createSummaryCogs, createLearningHoursByApm, readLearningHoursByApm, readLearningHoursAllConsultants, readLearningHoursForApm, createLearningHoursAllConsultant, readSummaryWbs, readClassTypePersenByApm, readClassTypePersenByProfitCenter } = require('../../controller/reportController')
+const { authentication } = require('../../middlewares')
+
+router.get('/learningHoursAllConsultants', authentication, readLearningHoursAllConsultants)
+router.get('/learningHoursForApm', authentication, readLearningHoursForApm)
+router.get('/learningHoursByProfitCenter', authentication, readLearningHoursByProfitCenter)
+router.get('/learningHoursByApm', authentication, readLearningHoursByApm)
+router.get('/summaryCogs', authentication, readSummaryCogs)
+router.get('/summaryWbs', authentication, readSummaryWbs)
+router.get('/classTypesPersen', authentication, readClassTypePersenByApm)
+router.get('/classTypesPersenByProfitCenter', authentication, readClassTypePersenByProfitCenter)
+router.post('/learningHoursByApm', authentication, createLearningHoursByApm)
+router.post('/classTypesPersen', authentication, createClassTypeByApm)
+router.post('/learningHoursForApm', authentication, createLearningHoursForApm)
+router.post('/learningHoursAllConsultants', authentication, createLearningHoursAllConsultant)
+router.post('/learningHoursByProfitCenter', authentication, createLearningHoursByProfitCenter)
+router.post('/summaryCogs', authentication, createSummaryCogs)
+router.post('/summaryWbs', authentication, createSummaryWbs)
+router.post('/odooTimeline', authentication, createOdooTimeline)
+
+module.exports = router

@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "NODE_ENV=development npx nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Adityo Prabowo",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^1.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "form-data": "^4.0.0",
+    "googleapis": "^105.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.8.0",
+    "sequelize": "^6.6.5",
+    "write-excel-file": "^1.4.15"
+  }
+}
